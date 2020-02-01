@@ -22,14 +22,14 @@
       </div>
    -->
   <div class="header">
-      <form #userForm="ngForm">
+      <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
           <h1>Job Search</h1>
           <div class="form-box">
-             <input type="text" class="search-job category" name=" category" placeholder="search by category..." ngModel> &bnsp
+             <input type="text" class="search-job category" name=" category" placeholder="search by category..." formControlName="categories"> &bnsp
 
-             <input type="text" class="search-job location" name=" category" placeholder="search by location..." ngModel> &bnsp
+             <input type="text" class="search-job location" name=" location" placeholder="search by location..." formControlName="location"> &bnsp
 
-             <button class="search-btn" type="button">Search</button>
+             <input class="search-btn" type="submit" value="Search"/>
           </div>
           
       </form>

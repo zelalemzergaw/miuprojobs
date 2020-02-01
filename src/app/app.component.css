@@ -5,7 +5,7 @@ body{
 .header
 {
     height: 100vh;
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(job11.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(chi.jpg);
     background-size: cover; 
     background-position: center;
     display: flex;
@@ -32,11 +32,11 @@ h1
 
 .category
 {
-    width: 400px;
+    width: 600px;
 }
 .location
 {
-    width: 200px;
+    width: 400px;
 }
 .search-btn
 {
@@ -56,44 +56,8 @@ h1
 {
     background: rgba(0,0,0,0.5);
     padding: 30px;
-    margin-bottom: 70%;
-
+    margin-bottom: 200px;
 
 }
 
 /*####################################################*/
-/*.nav-area
-{
-
-    list-style: none;
-    margin-top: 30px;
-    height: 10vh;
-}*/
-/*.wrapper
-{
-    width: 1170px;
-    margin-top: 60px;
-}
-
-.nav-area li
-{
-    display: inline-block;
-}
-.nav-area li a
-{
-    color:#fff;
-    text-decoration:none;
-    padding: 5px 20px;
-    font-family: poppins;
-    font-size: 14px; 
-}
-.nav-area li a: hover{
-    background: #fff;
-    color:#333;
-
-}
-.logo img {
-    width:90px;
-    float: left;
-    height: auto;
-}*/
