@@ -1,0 +1,36 @@
+
+<h2>Registration Form</h2>
+
+<form #userForm="ngForm">
+
+  <!-- {{userMode|json}} -->
+  <div class="imgcontainer">
+    <img src="assets/img_avatar3.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="fname"><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="fname" required>
+
+    <label for="lname"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="pnumber"><b>Phone Number</b></label>
+    <input type="password" placeholder="Enter Phone Number" name="pnumber" required>
+    
+        
+    <button type="submit">Register</button>
+    <!-- <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label> -->
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button" class="registerbtn">Sign In</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
