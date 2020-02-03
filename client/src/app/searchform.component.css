@@ -1,0 +1,81 @@
+
+.header
+{
+    /* margin: 0; */
+    /* padding: 0; */
+
+    position:fixed;
+    left:0;
+    right:0;
+    
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../assets/images/chi.jpg);
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-family: sans-serif; 
+    
+
+}
+h1
+{
+    color:#fff;
+    margin-bottom: 18px; 
+    font-size :45px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.search-job 
+{
+ height: 40px;
+ padding: 10px;
+ border: none;
+ border-radius: 25px;
+ outline: none;
+ font-size: large;
+ font-weight: bolder;
+}
+
+.keyword
+{
+    width: 450px;
+    text-align: center;
+}
+.location
+{
+    width: 350px;
+    text-align: center;
+}
+.search-btn
+{
+    height: 70px;
+    width: 200px;
+    background: #ffeb3b;
+    border: none;
+    color:#000;
+    border-radius: 25px;
+    font-size: x-large;
+    font-weight: bolder;
+
+}
+.search-btn:hover{
+    background: #ffc107;
+    cursor: pointer;
+}
+.form-box
+{
+    background: rgba(0,0,0,0.5);
+    padding: 30px;
+    margin-bottom: 200px;
+
+}
+.theform{
+    padding-top: 150px;
+}
+
+
+
+
+/*####################################################*/

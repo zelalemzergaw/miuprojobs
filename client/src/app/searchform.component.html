@@ -1,0 +1,42 @@
+
+        <!-- div class="wrapper">
+            <div class="logo">
+                <img src="" alt="search-job">
+                
+            </div>
+            <ul class="nav-area">
+                <li><a href="#">Find Job</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Find Salaries</a></li>
+                <li><a href="#">Upload Resume</a></li>
+                <li><a href="#">Employee Post J</a></li>
+                <li><a href="#">Sign In</a></li>
+            </ul>
+            
+        </div>
+     -->
+
+     <app-navbar></app-navbar>
+     
+
+    <div class="header">
+        
+
+        <div class="theform">
+
+        <form #Searchform="ngForm" (ngSubmit)="onSubmit()">
+            <h1>MIU Pro Jobs</h1><br><br>
+            <div class="form-group">
+               <input type="text" class="search-job keyword" id="keyword"  [(ngModel)]="keyword"   name="keyword" > &nbsp;
+  
+               <input type="text" class="search-job location" id="location" [(ngModel)]="location"  name="location" > &nbsp;
+  
+               <input class="search-btn" type="submit" value="Search"/>
+            </div>
+            
+        </form>
+
+        </div>
+    </div>
+
+  

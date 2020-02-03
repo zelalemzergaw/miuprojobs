@@ -1,0 +1,11 @@
+<ul class="job_list">
+    <li class="list_item" *ngFor= "let job of jobs">
+        <a href="javascript:void(0);" (click)="show_description(job)">
+
+            Id:   {{job.id}} 
+            Name: {{job.name}}
+
+        </a></li>
+</ul>
+
+
