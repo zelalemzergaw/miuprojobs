@@ -1,4 +1,4 @@
-# JobHunt Server
+# MIU_Pro_Jobs Server
 
 The server for JobHunt.
 

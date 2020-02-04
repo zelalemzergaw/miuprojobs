@@ -1,0 +1,22 @@
+a.selected,
+a.selected:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+a {
+  cursor: pointer;
+}
+.header {
+  height: 460vh;
+  background-image:linear-gradient(rgb(159, 185, 206),rgba(233, 221, 221, 0.5)),url(ang.png);
+   background-size: cover; 
+
+}
+.clk-search{
+  color:black;
+    margin-bottom: 18px; 
+    font-size :45px;
+    letter-spacing: 2px;
+    text-align: center;
+}
