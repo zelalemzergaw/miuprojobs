@@ -4,7 +4,21 @@
 
 export const environment = {
   production: false,
-  server_url : 'http://localhost:3000'
+  api: {
+    basepath: `http://localhost:3000`,
+    routes: {
+      'auth': {
+        login: 'login',
+        register: 'register',
+      },
+      'api/jobs': {
+        latest: 'latest',
+        visa_sponsor: 'visa-sponsor',
+        remote_jobs: 'remote-jobs',
+        high_salary: 'high-salary',
+      }
+    }
+  }
 };
 
 /*
