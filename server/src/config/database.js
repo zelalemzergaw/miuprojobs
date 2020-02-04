@@ -1,7 +1,11 @@
-require('dotenv').config();
 const mongoose = require('mongoose');
-
-mongoose.connect(`${process.env.DB_CONNECTION}/${process.env.DB_NAME}` || 'mongodb://localhost:27017/jobhunt');
-mongoose.Promise = global.Promise;
+const dbString = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0-rhrki.mongodb.net/test?retryWrites=true&w=majority`;
+mongoose.connect(dbString,(err)=>{
+    if(!err){
+        console.log('Database Connected Successfully');
+    }else{
+        console.log('Database Failed to connect');
+    }
+});
 
 module.exports = mongoose;

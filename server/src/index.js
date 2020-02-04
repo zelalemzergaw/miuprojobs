@@ -16,7 +16,7 @@ const app = express();
 /////////////////////////////////////////
 // CONFIG
 /////////////////////////////////////////
-app.set(SECRET_KEY, process.env.SECRET_KEY || 'MeanJobHuntSecretKey');
+app.set(SECRET_KEY, process.env.SECRET_KEY || 'MiuprojobsSecretKey');
 
 /////////////////////////////////////////
 // MIDDLEWARE
@@ -25,7 +25,7 @@ app.use(require('cors')());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/assets', express.static(process.env.PUBLIC_PATH));
+//app.use('/assets', express.static(process.env.PUBLIC_PATH));
 /////////////////////////////////////////
 // ROUTING
 /////////////////////////////////////////
