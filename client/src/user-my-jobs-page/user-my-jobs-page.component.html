@@ -1,0 +1,51 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="display-4">My Jobs</h1>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="list-group ">
+          <a [routerLink]="['/u/jobs', j._id]" class="list-group-item list-group-item-action" *ngFor="let j of jobs">
+            <div class="row">
+              <div class="col-md-10">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1 text-primary">{{ j.title }}</h5>
+                  <small><fa-icon [icon]="faClock" size="xs"></fa-icon> {{ j.created_at | timeAgo }}</small>
+                </div>
+                <p class="mb-1 text-dark mt-3">
+                  <span class="mr-5">{{ j.company }}</span>
+                  <span><fa-icon class="text-danger" [icon]="faMapMarker"></fa-icon> {{ j.location }}</span>
+                </p>
+                <p class="mb-1 mt-3">
+                  <span class="text-success mr-5">{{ j.salary_range | salary_range }}</span>
+
+                  <span *ngIf="j.visa_sponsor">
+                    <span class="text-warning mr-5">Visa Sponsor</span>
+                  </span>
+                  <span *ngIf="j.is_remote">
+                    <span class="text-info mr-5">Remote</span>
+                  </span>
+
+                </p>
+              </div>
+
+              <div class="col-md-2">
+                <div class="badge badge-success" *ngIf="j.is_published; else unpublished">PUBLISHED</div>
+                <ng-template #unpublished>
+                  <div class="badge badge-danger">UNPUBLISHED</div>
+                </ng-template>
+
+              </div>
+            </div>
+          </a>
+
+
+        </div>
+      </div>
+
+    </div>
