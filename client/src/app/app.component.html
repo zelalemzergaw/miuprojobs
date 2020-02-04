@@ -2,21 +2,21 @@
 <div  class="header">
   <nav class="navbar navbar-expand-lg navbar-dark bg-info navbar-expand-lg header">
     <div class="container">
-      <a class="navbar-brand " [routerLink]="['/']"> <button type="button" class="btn btn-light text-black btn-lg ">MIU Job Pro</button></a>
+      <a class="navbar-brand " [routerLink]="['/']"> <button type="button" class="btn btn-primary text-black btn-lg ">MIU Job Pro</button></a>
 
         <div class="navbar-collapse collapse" *ngIf="!isAuth; else authNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/jobs']"><button type="button" class="btn btn-light">View Jobs</button></a>
+              <a class="nav-link" [routerLink]="['/jobs']"><button type="button" class="btn btn-primary">View Jobs</button></a>
             </li>
 
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/', 'login']"><button type="button" class="btn btn-light">Login</button></a>
+              <a class="nav-link" [routerLink]="['/', 'login']"><button type="button" class="btn btn-success">Login</button></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/', 'register']"><button type="button" class="btn btn-light">Register</button></a>
+              <a class="nav-link" [routerLink]="['/', 'register']"><button type="button" class="btn btn-success">Register</button></a>
             </li>
           </ul>
         </div>
