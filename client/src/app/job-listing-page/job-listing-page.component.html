@@ -1,0 +1,45 @@
+<div class="header">
+  <div class="row">
+    <div class="col-md-2 offset-md-2 px-2 py-2">
+      <div class="list-group form-box">
+        <a (click)="loadLatestJobs()" class="list-group-item list-group-item-action" [ngClass]="{'selected': currentMode == 0}"><button class="btn">Recently uploded Jobs</button></a>
+        <a (click)="loadVisaSponsorJobs()" class="list-group-item list-group-item-action" [ngClass]="{'selected': currentMode == 1}"><button class="btn">H1-B</button></a>
+        <a (click)="loadRemoteJobs()" class="list-group-item list-group-item-action" [ngClass]="{'selected': currentMode == 2}"><button class="btn">Remote Jobs</button></a>
+        <a (click)="loadHighSalariesJobs()" class="list-group-item list-group-item-action" [ngClass]="{'selected': currentMode == 3}"><button class="btn">Sort by Salary</button></a>
+      </div>
+    </div>
+
+    <div class="col-md-6 px-3 py-5 ">
+      <div class="card">
+        <div class="card-header search-page">
+          <p class="clk-search ">Click on jobs to see the detail</p>
+        </div>
+        <div class="list-group list-group-flush ">
+          <a [routerLink]="['/jobs', j._id]" class="list-group-item list-group-item-action group" *ngFor="let j of jobs">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1 text-black">{{ j.title }}</h5>
+                  <small><fa-icon [icon]="faClock" size="xs"></fa-icon> {{ j.created_at | timeAgo }}</small>
+                </div>
+                <p class="mb-1 text-dark mt-3">
+                  <span class="mr-5">{{ j.company }}</span>
+                  <span><fa-icon class="text-danger" [icon]="faMapMarker"></fa-icon> {{ j.location }}</span>
+                </p>
+                <p class="mb-1 mt-3">
+                  <span class="text-success mr-5">{{ j.salary_range | salary_range }}</span>
+                  <span *ngIf="j.visa_sponsor">
+                    <span class="text-primary mr-5">Visa Sponsor</span>
+                  </span>
+                  <span *ngIf="j.is_remote">
+                    <span class="text-info mr-5">Remote</span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
