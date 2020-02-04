@@ -12,7 +12,7 @@
     <div class="col-md-6 px-3 py-5 ">
       <div class="card">
         <div class="card-header search-page">
-          <p class="clk-search ">Click on jobs to see the detail.</p>
+          <p class="clk-search ">Click on jobs to see the detail</p>
         </div>
         <div class="list-group list-group-flush ">
           <a [routerLink]="['/jobs', j._id]" class="list-group-item list-group-item-action group" *ngFor="let j of jobs">
@@ -29,7 +29,7 @@
                 <p class="mb-1 mt-3">
                   <span class="text-success mr-5">{{ j.salary_range | salary_range }}</span>
                   <span *ngIf="j.visa_sponsor">
-                    <span class="text-warning mr-5">Visa Sponsor</span>
+                    <span class="text-primary mr-5">Visa Sponsor</span>
                   </span>
                   <span *ngIf="j.is_remote">
                     <span class="text-info mr-5">Remote</span>
