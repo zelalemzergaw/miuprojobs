@@ -1,6 +1,6 @@
 # Server API Documentation
 
-Following is the supported API for JobHunt server.
+Following is the supported API for MIU_Pro_Jobs server.
 
 - [ ] [Authentication API](#authentication-api)
 - [ ] [Listing API]()
@@ -10,7 +10,7 @@ Following is the supported API for JobHunt server.
 
 ## Authentication API
 
-In JobHunt, authentication is for recruiters to access to the dashboard. Following are supported end-points.
+In MIUProJobs, authentication is for recruiters to access to the dashboard. Following are supported end-points.
 
 - [Register](#register-apiauthregister)
 - [Login](#login-apiauthlogin)
@@ -40,16 +40,16 @@ For example:
 
 ```
 > POST /auth/register HTTP/1.1
-> Host: localhost:4000
+> Host: localhost:3000
 > User-Agent: insomnia/7.0.3
 > Content-Type: application/json
 > Accept: */*
 > Content-Length: 85
 
 | {
-| 	"name" : "Pete Houston",
-| 	"email": "contact@petehouston.com",
-| 	"password": "123"
+| 	"name" : "Bereket Abraham",
+| 	"email": "babraham@mum.edu",
+| 	"password": "1234"
 | }
 ```
 
@@ -78,15 +78,15 @@ For example:
 
 ```
 > POST /auth/login HTTP/1.1
-> Host: localhost:4000
+> Host: localhost:3000
 > User-Agent: insomnia/7.0.3
 > Content-Type: application/json
 > Accept: */*
 > Content-Length: 61
 
 | {
-| 	"email": "contact@petehouston.com",
-| 	"password": "123"
+| 	"email": "babraham@mum.edu",
+| 	"password": "1234"
 | }
 ```
 
@@ -97,7 +97,7 @@ TBD.
 
 ## Submission API
 
-TBD.
+TBD.s
 
 ## Candiate API
 

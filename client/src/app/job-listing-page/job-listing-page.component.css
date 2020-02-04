@@ -10,20 +10,20 @@ a {
 .header {
   height: 400vh;
   background-image:linear-gradient(rgb(159, 185, 206),rgba(233, 221, 221, 0)),url(ang.png);
-   background-size: cover; 
-   
+   background-size: cover;
+
 
 }
 .clk-search{
   color:black;
-    margin-bottom: 18px; 
-    font-size :45px;
+    margin-bottom: 18px;
+    font-size :30px;
     letter-spacing: 2px;
     text-align: center;
 }
 .btn{
   height: 60px;
-  width: 300px;
+  width: 200px;
   background: #9cac10;
   border:black;
   color:#000;
@@ -40,7 +40,7 @@ a {
 } */
 .search-page{
   background-color: rgba(194, 182, 173, 0.897);
-  width: 100vh;
+  width: 815px;
   height: 8vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration-style: double;
