@@ -1,0 +1,15 @@
+.nav-link {
+  cursor: pointer;
+}
+.header {
+  height: 17vh;
+  background-image:linear-gradient(rgba(10, 10, 10, 0.02),rgba(0, 0, 0, 0.877)),url(mean-image.png);
+   background-size: cover;
+  background-position: center;
+}
+.logo{
+  background-image:linear-gradient(rgb(195, 218, 219),rgba(0,0,0,0.5)),url(mui.png);
+  height: 7vh;
+  background-size: cover;
+  background-position: center
+}

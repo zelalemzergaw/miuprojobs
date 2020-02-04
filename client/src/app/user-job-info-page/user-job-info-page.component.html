@@ -1,0 +1,101 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-12">
+      <a [routerLink]="['/u/jobs']" class="mb-5">Back to Jobs</a>
+
+      <h2><small>Position</small>
+        <span class="text-primary mx-3">{{job.title}}</span>
+         <small>at</small>
+        <span class="text-info mx-3">{{job.company}}</span>
+      </h2>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+          <a [routerLink]="['edit']" type="button" class="btn btn-block btn-danger mb-2">Edit</a>
+          <hr>
+           <a [routerLink]="['applications']" type="button" class="btn btn-block btn-primary mb-2">Applicants</a>
+          <hr>
+          <button (click)="onPublish()" type="button" class="btn btn-block btn-info mb-2" *ngIf="!job.is_published" [disabled]="!job.can_publish">Publish</button>
+          <a [routerLink]="['/jobs', jobId]" class="btn btn-info btn-block mb-2" *ngIf="job.is_published">View Job</a>
+          <button (click)="onUnpublish()" type="button" class="btn btn-block btn-warning mb-2" *ngIf="job.is_published">Unpublish</button>
+    </div>
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-body">
+          <dl class="row">
+            <dt class="col-md-2">Status</dt>
+            <dd class="col-md-10">
+              <span class="badge badge-pill badge-success" *ngIf="job.is_published">PUBLISHED</span>
+              <span class="badge badge-pill badge-warning" *ngIf="!job.is_published">UNPUBLISHED</span>
+            </dd>
+          </dl>
+
+          <dl class="row">
+            <dt class="col-md-2">Position</dt>
+            <dd class="col-md-10 text-primary">
+              <span class="text-medium"><strong>{{job.title}}</strong></span>
+            </dd>
+          </dl>
+
+          <dl class="row">
+            <dt class="col-md-2">Company</dt>
+            <dd class="col-md-10 text-info">
+              <span class="text-medium"><strong>{{job.company}}</strong></span>
+            </dd>
+          </dl>
+
+          <dl class="row">
+            <dt class="col-md-2">Location</dt>
+            <dd class="col-md-10">{{job.location}}</dd>
+          </dl>
+
+          <dl class="row">
+            <dt class="col-md-2">Job Type</dt>
+            <dd class="col-md-10">{{job.job_type | job_type}}</dd>
+          </dl>
+
+          <dl class="row">
+            <dt class="col-md-2">Remote</dt>
+            <dd class="col-md-10">{{job.is_remote ? 'Yes' : 'No'}}</dd>
+          </dl>
+
+          <dl class="row">
+            <dt class="col-md-2">VISA Sponsor</dt>
+            <dd class="col-md-10">{{job.visa_sponsor ? 'Yes': 'No'}}</dd>
+          </dl>
+
+          <dl class="row">
+            <dt class="col-md-2">Salary</dt>
+            <dd class="col-md-10">
+              <span class="badge badge-danger text-medium px-3 py-2">
+              {{job.salary_range | salary_range}}
+                </span>
+
+            </dd>
+          </dl>
+
+          <dl class="row">
+            <dt class="col-md-2">Description</dt>
+            <dd class="col-md-10">
+              <div [innerHTML]="job.description" *ngIf="job.description; else noDescription"></div>
+              <ng-template #noDescription><p>Click <strong>EDIT BUTTON</strong></p> to add description.</ng-template>
+            </dd>
+          </dl>
+
+          <dl class="row">
+            <dt class="col-md-2">Requirement</dt>
+            <dd class="col-md-10">
+              <div [innerHTML]="job.requirement" *ngIf="job.requirement; else noRequirement"></div>
+              <ng-template #noRequirement><p>Click <strong>EDIT BUTTON</strong></p> to add requirement.</ng-template>
+            </dd>
+          </dl>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
